@@ -1,0 +1,143 @@
+.Contenedor{
+    max-width: 80%x;
+}
+
+@media screen and (max-width: 800px)
+{
+    .main{
+        width: 100%;
+        
+    }
+    .top{
+
+        width: 100%;
+        font-size: 1rem;;
+       
+    }
+    .title{
+        
+        font-size: 1.5rem;
+    }
+    .naveg ul li a{
+        display: block;
+        padding: .2rem;
+        border-radius: 5%;
+    }
+
+    .crear .bt{
+        
+        font-size: 150%;
+        
+        margin-top: 2%;
+        width: 50%;
+    }
+    h1{
+        font-size: 2.5rem;
+        color: red;
+    }
+    
+    .header{
+        width: 100%;
+        background-color: red;
+    }
+
+    .cont input[type=text],input[type=number]{
+        width: 70%;
+        height: 3%;
+        padding: 3%;
+        margin: auto;
+    }
+    .crear .nuevo{
+        color: rgb(223, 223, 223);
+        font-family: 'DM Mono', monospace;
+        font-size: 24px;    
+      
+    }
+    .tit{
+        
+        font-size: 30px;    
+        
+    }
+    
+    #ContenidoElectronico, #ContBic,#ContInd,#ContMueble,#ContOtro{
+        display: none;
+        width: 85%;
+        margin: auto;
+        background-color: hsla(157, 2%, 61%,.3);
+        padding: 1.5%;
+        box-shadow: 13px 10px 20px 2px rgba(0,0,0,0.58);
+        font-size: 1.4rem;
+    
+    }
+
+    
+}
+
+@media screen and (max-width: 400px)
+{
+    .main{
+        width: 100%;
+        
+    }
+    .top{
+
+        width: 100%;
+        font-size: 0.7rem;;
+    }
+    .title{
+       
+        font-size: 1.1rem;
+    }
+
+    .naveg ul li a{
+        display: block;
+        padding: .2rem;
+        border-radius: 5%;
+    }
+
+    .crear .bt{
+        
+        font-size: 150%;
+        
+        margin-top: 2%;
+        width: 55%;
+    }
+    h1{
+        font-size: 2rem;
+        color: red;
+    }
+    
+    .header{
+        width: 100%;
+        background-color: red;
+    }
+    .cont input[type=text],input[type=number]{
+        width: 70%;
+        height: 3%;
+        padding: 3%;
+        margin: auto;
+    }
+    .crear .nuevo{
+        color: rgb(223, 223, 223);
+        font-family: 'DM Mono', monospace;
+        font-size: 20px;    
+      
+    }
+    .tit{
+        
+        font-size: 19px; 
+        
+        
+    }
+    #ContenidoElectronico, #ContBic,#ContInd,#ContMueble,#ContOtro{
+        display: none;
+        width: 85%;
+        margin: auto;
+        background-color: hsla(157, 2%, 61%,.3);
+        padding: 1.5%;
+        box-shadow: 13px 10px 20px 2px rgba(0,0,0,0.58);
+        font-size: 1.4rem;
+    
+    }
+    
+}

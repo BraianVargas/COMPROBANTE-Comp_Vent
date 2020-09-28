@@ -1,0 +1,68 @@
+.social-bar {
+	position: fixed;
+	right: 0;
+	top: 45%;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+	
+}
+
+.icon ,.icon-whatsapp{
+	color: white;
+	text-decoration: none;
+	padding: .5rem 1.2em;
+	display: flex;
+	transition: all .5s;
+}
+.social-bar > a{
+	width: 1.5rem;
+	max-width: 20%;
+	margin: 0;
+}
+.social-bar ul{
+	width: 3%;
+	max-width: 25%;
+	margin: 0;
+}
+
+.icon-linkedin {
+	background: #2E406E;
+}
+.icon-whatsapp {
+	background: rgb(4, 194, 20);
+}
+.icon-google-plus{
+	background: rgb(233, 14, 14);
+}
+
+.icon:first-child,.icon-whatsapp {
+	border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child,.icon-whatsapp {
+	border-radius: 0 0 0 1rem;
+}
+
+.icon:hover {
+	padding-right: 3em;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+.icon-whatsapp > li{
+	display: none;
+}
+#wsp:hover > li{
+	display: flex;
+}
+.icon-whatsapp:hover {
+	padding-right: 8em;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+.icon-whatsapp > li a{
+	text-align: right;
+}

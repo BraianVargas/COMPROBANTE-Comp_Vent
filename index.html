@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Comprobante </title>
+        <link rel="stylesheet" href="Css/indexStyle.css">
+        <link rel="stylesheet" href="Css/Responsive.css">
+    </head>
+    <body>
+        <div>
+            <br>
+            <h1> AVISO LEGAL!!!</h1>
+            <br>
+            <p>
+                <h3>
+                    Para su propia seguridad, ésta pagina requiere datos personales como nombre y direccion de comprador y vendedor,
+                    al continuar usted acepta que los datos depositados a continuación serán almacenados para seguridad de la/las 
+                    transacciones realizadas y evitar posibles estafas. Los datos aqui proporcionados tienen caracter de declaración jurada (DDJJ),
+                    cualquier falsificación de los mismos tendrá consecuensias legales contra su persona.   
+                </h3>
+                <br><br><br><br>    
+                <label>
+                    <input type="checkbox" id="chkContinue" onclick="btnContinue.disabled = ! this.checked" >
+                    He leído y acepto los terminos y condiciones.
+                </label>
+                <input type="button" id="btnContinue" value="Continuar" onclick="location.href='Principal.html'" disabled>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    width: 80%;
+    background-color: rgb(73, 73, 73);
+    margin-left: auto;
+}
+h1{
+    font-size: 3rem;
+    color: red;
+}
+body div{
+    width: 80%;
+    align-items: center;
+    display: block;
+    position: relative;
+}
+h3,label{
+    color: gainsboro;
+}
+#chkContinue{
+    width: 30px;
+    height: 15px;
+}
+#btnContinue{
+    margin: 4%;
+    margin-left: 85%;
+    background-color: rgb(0, 122, 204);
+    border: none;
+    border-radius: 10px;
+    width: 20%;
+    height: 5%;
+}

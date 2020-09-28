@@ -1,0 +1,9 @@
+body{
+    background-color: #e8ede1;
+}
+
+#datVen,#datCom,#elec,#bici,#mueble{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

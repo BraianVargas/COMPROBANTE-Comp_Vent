@@ -1,0 +1,49 @@
+header{
+    background-color: rgba(0, 0, 0, 0.418);
+    padding: 1rem 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+}
+header a{
+    color: rgb(199, 199, 199);
+    text-decoration: none;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: #ffbb00
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    color: rgb(255, 187, 0);
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+
+    letter-spacing: 1px;
+    margin-left: 2%;
+    width: 40%;
+}
+.naveg ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.naveg ul li {
+    display:inline-block;
+}
+.naveg ul li a{
+    display: block;
+    padding: .5rem;
+    border-radius: 5%;
+}
+nav ul li a:hover{
+    background-color: rgb(19, 18, 18);
+    transition: all 0.4s linear;
+}

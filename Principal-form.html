@@ -1,0 +1,519 @@
+<html>
+
+<head>
+    <title> Comprobante </title>
+
+
+    <link rel="stylesheet" href="Css/bootstrap/bootstrap.min.css">
+
+    <link rel="stylesheet" href="Css/estilobra.css">
+    <!-- <link rel="stylesheet" href="Css/estilo.css"> -->
+    <!-- <link rel="stylesheet" href="Css/estiloheader.css"> -->
+    <!-- <link rel="stylesheet" href="Css/Categorias.css"> -->
+    <link rel="stylesheet" href="JS/Oculta.js">
+    <link rel="stylesheet" href="Css/MenuSocial.css">
+    <link rel="stylesheet" href="Css/font.css">
+    <!-- <link rel="stylesheet" href="Css/Responsive.css"> -->
+
+    <script src="jspdf/dist/jspdf.min.js"></script>
+    <script src="JS/BtnArriba.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+</head>
+
+<body>
+    <!-- Botón flotante volver arriba -->
+    <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">
+        <span class="glyphicon glyphicon-row-up">
+        </span>
+    </a>
+    <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">
+        <span class="glyphicon glyphicon-row-up">
+        </span>
+    </a>
+
+
+    <header>
+        <nav style="padding:1.3%;" class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-1">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="custom-logo-link">
+                        <h1> Compra - venta </h1>
+                    </a>
+                </div>
+                <!-- Inicia Menu -->
+                <div class="collapse navbar-collapse navbar-right" id="navbar-1">
+                    <ul class="nav navbar-nav">
+                        <li class="">
+                            <a href="index.html"> Inicio </a>
+                        </li>
+                        <li class="active">
+                            <a> Nuevo </a>
+                        </li>
+                        <li class="">
+                            <a href="#Info"> Informacion </a>
+                        </li>
+                        <li class="">
+                            <a> Contacto </a>
+                        </li>
+                    </ul>
+                    <!-- Formulario de busquedas -->
+                    <!-- <form action="" class="navbar-form navbar-right" role="search">
+                            <div class="formgroup">
+                                <input type="text" class="form-control" placeholder="Buscar">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </form> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="social-bar">
+        <a href="mailto:mitiendao41@gmial.com" class="icon icon-google-plus"></a>
+        <a href="https://www.linkedin.com/in/braian-alberto-vargas-/" target="_blank" class="icon icon-linkedin"></a>
+        <ul class="icon-whatsapp" id="wsp">
+            <li> <a href="http://wa.me/549....">&nbsp; (264-Comprobante)</a> </li>
+        </ul>
+    </div>
+    <br><br>
+    <!-- Grupo datos vendedor -->
+    <div class="container" id="datVen" style="background-image: url('images/fondos.webp');">
+        <div class="row">
+            <div class="text-center col-sm-12">
+                <h2 class="tit">DATOS DE VENDEDOR </h2>
+                <div class="form-group">
+                    <div class="input-group col-xs-12">
+                        <label for="NombreVendedor">Nombre</label>
+                        <input class="form-control type=" text" placeholder="Nombre" id="NombreVendedor" name="nombre1">
+                        <br>
+                        <label for="ApellidoVendedor">Apellido</label>
+                        <input class="form-control type=" text" placeholder="Apellido" id="ApellidoVendedor"
+                            name="apellido1">
+                        <br>
+                        <label for="DniVendedor"> Dni </label>
+                        <input class="form-control type=" number" placeholder="Dni" id="DniVendedor" name="dni1">
+                        <br>
+                        <label for="">Domicilio</label>
+                        <input class="form-control type=" text" placeholder="Domicilio" id="DomicilioVendedor"
+                            name="domicilio1">
+                        <br>
+                        <label for="">Telefono</label>
+                        <input class="form-control type=" number" placeholder="Telefono" id="TelefonoVendedor"
+                            name="cel1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <!-- Grupo datos del Comprador -->
+    <div class="container" id="datCom" style="background-image: url('images/fondo-vendedor.webp');">
+        <div class="row">
+            <div class="text-center col-sm-12">
+                <h2>DATOS DEL COMPRADOR</h2>
+                <br>
+                <div class="form-group">
+                    <div class="input-group col-xs-12">
+                        <label for="NombreComprador"> Nombre </label>
+                        <input class="form-control" type="text" placeholder="Nombre" id="NombreComprador"
+                            name="NombreComprador">
+                        <br>
+
+                        <label for="ApellidoComprador"> Apellido </label>
+                        <input class="form-control" type="text" placeholder="Apellido" id="ApellidoComprador"
+                            name="ApellidoComprador">
+                        <br>
+
+                        <label for="DniComprador"> Dni </label>
+                        <input class="form-control" type="number" placeholder="Dni" id="DniComprador"
+                            name="DniComprador">
+                        <br>
+
+                        <label for="DomicilioComprador"> Domicilio </label>
+                        <input class="form-control" type="text" placeholder="Domicilio" id="DomicilioComprador"
+                            name="DomicilioComprador">
+                        <br>
+
+                        <label for="TelefonoComprador"> Telefono </label>
+                        <input class="form-control" type="number" placeholder="Telefono" id="TelefonoComprador"
+                            name="CelComprador">
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    
+    <!-- Grupo Seleccion de operacion -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="tit">Seleccione la Operacion</h2>
+                <br>
+                <div class="form-group">
+                    <!-- Radio Buttons -->
+                    <div class="form-group col-xs-6">
+                        <label for="rbVenta">Venta: </label>
+                        <input type="radio" id="rbVenta" onclick="Venta()">
+                    </div>
+                    <div class="form-group col-xs-6">
+                        <label for="rbCanje">Permuta: </label>&nbsp;
+                        <input type="radio" id="rbCanje" onclick="Canje()">
+                    </div>
+                    <br>
+                    <!-- Inputs ocultos -->
+                    <div class="form-group">
+                        <div class="input-group col-md-4 container">
+                            <label class="input-group-addon"> Pesos: </label>
+                            <input class="form-control" type="number" placeholder="$----" name="input Venta"
+                                id="bxVenta">
+                            <label class="input-group-addon"> .00</label>
+                        </div>
+                        <br>
+                        <div class="input-group container col-xs-6">
+                            <input class="form-control" type="text" placeholder="Objeto de Permuta" name="input Venta"
+                                id="bxCanje">
+                        </div>
+                        <br>
+                        <div class="input-group container col-xs-6">
+                            <textarea class="form-control" name="OBSERVACION" id="bxCanjee" class="txtOtro"
+                                placeholder="OBSERVACION"></textarea>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <!-- Categorias -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h3>Nuevo Formulario</h3>
+                <h3 class="tit">CATEGORIA DEL ARTICULO</h3> <br>
+
+                <div class="panel-group" id="acordion" role="tablist">
+
+                    <!-- Tab Electronicos -->
+                    <div class="panel panel-default" id="elec" style="background-image: url('images/fondo-electronica.webp');">
+                        <div class="panel-heading" role="tab" id="headingElect">
+                            <h4 class="panel-title">
+                                <a href="#collapseElec" data-toggle="collapse" data-parent="#accordion">
+                                    Electronicos
+                                    <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseElec" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div id="form-group col-xs-10">
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon" for="marca"> Marca:</label>
+                                        <input class="form-control col-xs-9" type="text" size="30" maxlength="45"
+                                            placeholder="Marca" id="marca">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Modelo:</label>
+                                        <input class="form-control col-xs-9" type="text" size="30" maxlength="45"
+                                            placeholder="Modelo" id="modelo"><br>
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Color:</label>
+                                        <input class="form-control col-xs-9" type="text" size="30" maxlength="45"
+                                            placeholder="Color" id="color">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> N° de serie:</label>
+                                        <input class="form-control col-xs-9" type="text" size="30" maxlength="45"
+                                            placeholder="N° de serie" id="n_serie">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Estado:</label>
+                                        <input class="form-control col-xs-9" type="text" size="30" maxlength="45"
+                                            placeholder="Estado" id="estado">
+                                    </div>
+                                    <br>
+                                    <!-- Radio Accesorios -->
+                                    <div class="col-xs-12 input-group">
+                                        <h4> Accesorios:</h4>
+                                        <div class="container form-group col-xs-6">
+                                            <label for="SI">Si: </label>
+                                            <input type="radio" id="SI" onchange="accesorioSi()">
+                                        </div>
+                                        <div class="container form-group col-xs-6">
+                                            <label for="NO">No: </label>&nbsp;
+                                            <input type="radio" id="NO" onchange="accesorioNo()">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 container input-group">
+                                        <br>
+                                        <input class="form-control" type="text" size="30" maxlength="45"
+                                            placeholder="Accesorios" id="accesorio">
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Bicicletas -->
+                    <div class="panel panel-default" id="bici" style="background-image: url('images/fondo-bicicleta.webp');">
+                        <div class="panel-heading" role="tab" id="headingBic">
+                            <h4 class="panel-title">
+                                <a href="#bicicletas" data-toggle="collapse" data-parent="#accordion">
+                                    Bicicleta
+                                    <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="bicicletas" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="container form-group col-xs-12">
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Tipo de Bicicleta</label>
+                                        <input class="form-control" type="text" placeholder="Tipo de Bicicleta"
+                                            id="tipo2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Marca</label>
+                                        <input class="form-control" placeholder="Marca" id="marca2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Modelo</label>
+                                        <input class="form-control" placeholder="Modelo" id="modelo2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Color</label>
+                                        <input class="form-control" placeholder="Color" id="color2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Extras</label>
+                                        <input class="form-control" placeholder="Extras" id="extras2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Nº de Cuadro</label>
+                                        <input class="form-control" placeholder="Nº de Cuadro" id="cuadro2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Talle del cuadro</label>
+                                        <input class="form-control" placeholder="Talle del cuadro" id="Tallecuadro2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Talle de cubierta</label>
+                                        <input class="form-control" type="text" placeholder="Talle de cubierta"
+                                            id="Tallecubierta2">
+                                    </div>
+                                    <br>
+
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Material</label>
+                                        <input class="form-control" type="text" placeholder="Material" id="material2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Marca y modelo del Cambio</label>
+                                        <input class="form-control" type="text" placeholder="Marca y modelo del Cambio"
+                                            id="cambio2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Marca y modelo de Frenos</label>
+                                        <input class="form-control" type="text" placeholder="Marca y modelo de Frenos"
+                                            id="frenos2">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon"> Marca y modelo Horquilla</label>
+                                        <input class="form-control" type="text" placeholder="Marca y modelo  Horquilla"
+                                            id="Horquilla2">
+                                    </div>
+                                    <br>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Indumentaria -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingInd">
+                            <h4 class="panel-title">
+                                <a href="#indumentarias" data-toggle="collapse" data-parent="#accordion">
+                                    Indumentaria
+                                    <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="indumentarias" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="container form-group col-xs-12" id="ContInd">
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon" >Tipo de Prenda</label>
+                                        <input class="form-control" type="text" placeholder="Tipo de prenda" id="tipo3">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon" >Marca</label>
+                                        <input class="form-control" type="text" placeholder="Marca" id="marca3">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon" >Talle</label>
+                                        <input class="form-control" type="text" placeholder="Talle" id="Talle3">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon" >Color</label>
+                                        <input class="form-control" type="text" placeholder="Color" id="color3">
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Mueble -->
+                    <div class="panel panel-default" id="Mueble" style="background-image: url('images/fondo-muebles.jpg');">
+                        <div class="panel-heading" role="tab" id="headingMue">
+                            <h4 class="panel-title">
+                                <a href="#muebles" data-toggle="collapse" data-parent="#accordion">
+                                    Mueble
+                                    <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="muebles" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="container form-group col-xs-12" id="ContMueble">
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon">Tipo de Muebe</label>
+                                        <input class="form-control" type="text" size="30" maxlength="45" placeholder="Tipo de Mueble" id="TipodeMueble4">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon">Material</label>
+                                        <input class="form-control" type="text" size="30" maxlength="45" placeholder="Material" id="Material4">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon">Color</label>
+                                        <input class="form-control" type="text" size="30" maxlength="45" placeholder="Color" id="Color4">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon">Dimenciones</label>
+                                        <input class="form-control" type="text" size="30" maxlength="45" placeholder="Dimenciones" id="Dimenciones4">
+                                    </div>
+                                    <br>
+                                    <div class="col-xs-12 input-group">
+                                        <label class="input-group-addon">Estado</label>
+                                        <input class="form-control" type="text" size="30" maxlength="45" placeholder="Estado" id="Estado4">
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Otros -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOtros">
+                            <h4 class="panel-title">
+                                <a href="#otros" data-toggle="collapse" data-parent="#accordion">
+                                    Otros
+                                    <span class="caret"></span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="otros" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="container form-group col-xs-12">
+                                    <div class="col-xs-12 input-group" id="ContOtro">
+                                        <h3>Producto</h3>
+                                        <input class="form-control" type="text" placeholder="Producto" id="Producto5">
+                                        <br><br>
+                                        <textarea class="form-control" placeholder="Descripción" id="txtOtro" class="otros"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <form class="col-xs-12 container text-center" action="php/enviar.php" method="POST">
+        <input class="btn btn-primary" type="submit" name="enviar" id="btnSig" value="Guardar Datos" onclick="Siguiente()">
+    </form>
+
+    <script src="JS/DescargaPDF.js"></script>
+    <script src="JS/pdfelectronico.js"></script>
+    <script src="JS/pdfbici.js"></script>
+    <script src="JS/pdfindimentaria.js"></script>
+    <script src="JS/pdfmueble.js"></script>
+    <script src="JS/pdfotros.js"></script>
+
+    <!-- 
+        PAGINA DEL EFECTO REVISAR 
+        https://desarrollofrontend.com/efecto-slide-vertical-o-scroll-con-css3/ 
+    -->
+
+    <br><br>
+    <div class="container" id="Info">
+        <div class="row col-xs-12">
+            <h2 name="INFORMACION" class="title col-xs-12 text-center">INFORMACION</h2>
+            <p class="text-">
+                Esta pagina tiene como objetivo acentar la compra y venta de productos usados/nuevos de
+                personas independientes de comercios.
+                Brindando un documento PDF para ambas partes con la finalidad de demostrar dicha transaccion
+                ante cualquier problema legal.
+                La pagina guardara una copia de la operacion realizada como respaldo del mismo.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="JS/bootstrap/jquery.js"></script>
+    <script src="JS/bootstrap/bootstrap.min.js"></script>
+
+</body>
+
+</html>
